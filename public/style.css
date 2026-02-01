@@ -3,12 +3,6 @@ body {
     padding: 0 2rem;
 }
 
-main {
-    max-width: 80ch;
-    margin: 0 auto;
-}
-
-
 
 nav a.login {
     display: inline-block;

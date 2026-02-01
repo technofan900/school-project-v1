@@ -1,0 +1,28 @@
+body {
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+main {
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
+
+
+nav a.login {
+    display: inline-block;
+    color: #fff;
+    border: 2px solid #1e90ff;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+nav a.login:hover {
+    background: #0c76d1;
+    border-color: #0c76d1;
+    color: #fff;
+}
+

@@ -2,11 +2,12 @@
   <header>
     <nav>
       <ul>
-        <li><strong>Mana Mājaslapa</strong></li>
+        <li><a href="/"><strong>Mana Mājaslapa</strong></a></li>
       </ul>
       <ul>
         <li><a href="/">Sākums</a></li>
-        <li><a href="/password">Notes</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/passwords">Passwords</a></li>
         <li><a class="login" href="/register">Register</a></li>
       </ul>
     </nav>

@@ -19,4 +19,13 @@ nav a.login:hover {
     border-color: #0c76d1;
     color: #fff;
 }
+/* Centering utilities for forms */
+.text-center {
+    text-align: center;
+}
+.btn-center {
+    display: block; /* let margin auto center it */
+    margin: 0.5rem auto; /* vertical spacing and horizontal centering */
+    width: 20rem; /* match previous inline width */
+}
 

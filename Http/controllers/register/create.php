@@ -58,4 +58,4 @@ login([
 
 unset($_SESSION['old']);
 
-redirect('/');
+redirect('/pop_up');

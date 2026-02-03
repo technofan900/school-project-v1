@@ -21,9 +21,20 @@ require base_path ("views/partials/nav.php");
           <button id="togglePassword" type="button">Show</button>
         </label>
 
-        <button type="submit">Nosūtīt</button>
+        <button type="submit" name="submit">Nosūtīt</button>
+        
       </form>
     </div>
+    <div>
+      <form method="GET" action="/login">
+        <div class="btn-center">
+          <h2 class="text-center">Log In</h2>
+          <button type="submit" name="log-in">Login</button>
+        </div>
+      </form>
+    </div>
+
+
 
 <script>
     (function show_password(){

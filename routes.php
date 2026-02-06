@@ -5,7 +5,7 @@ $router->get('/', 'index.php');
 $router->get('/about', 'about.php');
 
 // Login
-$router->get('/login', 'login/login.php');
+$router->get('/login', 'login/show.php');
 
 
 // Register page
@@ -15,4 +15,4 @@ $router->post('/register', 'register/create.php');
 $router->get("/pop_up", 'register/popup.php');
 
 // Notes page
-$router->get("/passwords", "notes/notes.php");
+$router->get("/passwords", "passwords/show.php");

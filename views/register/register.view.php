@@ -13,11 +13,17 @@ require base_path ("views/partials/nav.php");
         <label>
           E-pasts
           <input name="email" type="email" placeholder="epasts@example.com" required>
+          <?php if (isset($errors['email'])) : ?>
+            <p class="text-red-400 text-sm"><?= $errors['email'] ?></p>
+          <?php endif; ?>
         </label>
 
         <label>
           Password
           <input id="password" name="password" type="password" placeholder="******" required>
+          <?php if (isset($errors['password'])) : ?>
+            <p class="text-red-400 text-sm"><?= $errors['password'] ?></p>
+          <?php endif; ?>
           <button id="togglePassword" type="button">Show</button>
         </label>
 

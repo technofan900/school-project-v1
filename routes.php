@@ -15,4 +15,4 @@ $router->post('/register', 'register/create.php');
 $router->get("/pop_up", 'register/popup.php');
 
 // Notes page
-$router->get("/passwords", "passwords/show.php");
+$router->get("/passwords", "passwords/index.php");

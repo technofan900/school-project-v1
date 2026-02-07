@@ -13,6 +13,9 @@ require base_path("views/partials/nav.php");
         <label>
           Password
           <input id="password" name="password" type="password" placeholder="******" required>
+          <?php if (isset($errors['password'])) : ?>
+            <p class="text-red-400 text-sm"><?= $errors['password'] ?></p>
+          <?php endif; ?>
           <button id="togglePassword" type="button">Show</button>
         </label>
 

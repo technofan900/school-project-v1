@@ -4,7 +4,7 @@ require base_path("views/partials/nav.php");
 ?>
   <main>
     <section>
-      <h1>404 — Lapa nav atrasta</h1>
+      <h1>403 — Piekļuve aizliegta</h1>
       <p>Atvainojiet, pieprasītā lapa netika atrasta.</p>
       <p><a href="/">Atgriezties uz sākumu</a></p>
     </section>

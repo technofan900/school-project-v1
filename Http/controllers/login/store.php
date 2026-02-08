@@ -3,12 +3,12 @@ use Core\Authenticator;
 use Http\Forms\LoginForms;
 use Core\Session;
 
-$email = $_POST['email'];
+$username = $_POST['username'];
 $password = $_POST['password'];
 
 $form = new LoginForms();
 
-if ($form->validate($email, $password)) {
+if ($form->validate($username, $password)) {
 
     $auth = new Authenticator();
     if($auth->attempt($email, $password)) {

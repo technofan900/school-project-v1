@@ -8,7 +8,7 @@
         <li><a href="/">Sākums</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/passwords">Passwords</a></li>
-        <li><a class="login" href="/register">Register</a></li>
+        <li><a class="register" href="/register">Register</a></li>
       </ul>
     </nav>
-  </header>
+  </header> 

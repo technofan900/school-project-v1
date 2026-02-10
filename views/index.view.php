@@ -1,6 +1,6 @@
 <?php require base_path('views/partials/header.php'); ?>
 <?php require base_path('views/partials/nav.php'); ?>
-<div>
+<div class="container">
   <h1>Laipni lūdzam!</h1>
   <p>
     Šis ir vienkāršs mājaslapas templates, kas izmanto classless CSS dizainu.

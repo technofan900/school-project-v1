@@ -1,6 +1,6 @@
 
   <header>
-    <nav>
+    <nav class="container">
       <ul>
         <li><a href="/"><strong>Mana Mājaslapa</strong></a></li>
       </ul>

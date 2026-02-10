@@ -2,7 +2,7 @@
 require base_path ("views/partials/header.php");
 require base_path ("views/partials/nav.php");
 ?>
-    <div>
+    <div class="container">
       <h2>Register</h2>
       <form method="POST" action="/register">
         <label>

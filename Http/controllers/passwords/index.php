@@ -7,10 +7,15 @@ $db = App::resolve(Database::class);
 
 $userId = $_SESSION['user']['id'];
 
-$sql = "SELECT name FROM passwords WHERE userID = :userID ORDER BY id DESC";
-$notes = $db->query($sql, ['userID' => $userId])->get();
+$sql = "SELECT id, name FROM passwords WHERE id = 1 ORDER BY id DESC";
+$notes = $db->query($sql)->get();
 
 
 view("passwords/passwords.view.php", [
     'notes' => $notes
 ]);
+
+
+//hard coded for now to check if it even works, CHANGE BACK
+// userID = :userID
+// , ['userID' => $userId]

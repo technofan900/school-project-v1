@@ -16,3 +16,4 @@ $router->get("/pop_up", 'register/popup.php');
 
 // Notes page
 $router->get("/passwords", "passwords/index.php");
+$router->get("/passwords/create", "passwords/create.php");

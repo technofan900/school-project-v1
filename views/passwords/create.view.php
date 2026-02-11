@@ -4,7 +4,7 @@ require base_path("views/partials/nav.php");
 ?>
 <div class="container">
     <h2>Create note</h2>
-    <form method="POST" action="/passwords/create">
+    <form method="POST" action="/passwords">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" value="<?= htmlspecialchars($_POST['name'] ?? '') ?>">
@@ -12,7 +12,7 @@ require base_path("views/partials/nav.php");
 
         <div class="form-group">
             <label for="login-data">Login data</label>
-            <input type="text" name="login-data" id="login-data" value="<?= htmlspecialchars($_POST['login-data'] ?? '') ?>">
+            <input type="text" name="login_data" id="login_data" value="<?= htmlspecialchars($_POST['login_data'] ?? '') ?>">
         </div>
 
         <div class="form-group">

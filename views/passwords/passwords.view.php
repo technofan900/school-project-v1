@@ -1,12 +1,12 @@
 <?php
-require base_path ("views/partials/header.php");
-require base_path ("views/partials/nav.php");
+require base_path("views/partials/header.php");
+require base_path("views/partials/nav.php");
 ?>
 <div class="container">
     <h2>Saved passwords:</h2>
         <?php foreach ($notes as $note) : ?>
             <li>
-                <a <?=$note['id'] ?> class="text-blue-500 hover:underline">
+                <a href="/password?id=<?=$note['id'] ?>">
                     <?= htmlspecialchars($note['name']) ?>
                 </a>
             </li>

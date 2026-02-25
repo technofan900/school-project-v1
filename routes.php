@@ -21,6 +21,10 @@ $router->get("/passwords/create", "passwords/create.php");
 $router->post('/passwords', 'passwords/store.php');
 // Handle updating an existing password entry (form uses method override)
 $router->patch('/passwords', 'passwords/update.php');
+// Goes to popup that deletes note
+$router->get('/password/popup', 'passwords/popup.php');
+// Deletes note (form uses _method override)
+$router->delete('/passwords', 'passwords/destroy.php');
 
 $router->get("/password", "passwords/show.php");
 $router->get("/password/edit", "passwords/edit.php");

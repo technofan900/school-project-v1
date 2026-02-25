@@ -11,7 +11,7 @@ require base_path("views/partials/nav.php");
     </div>
     <div class="buttons">
         <a href="/password/edit?id=<?= $note['id'] ?>">Edit</a>
-        <a href="password/delete">Delete</a>
+        <a href="/password/popup?id=<?= $note['id'] ?>">Delete</a>
     </div>
 </div>
 

@@ -30,3 +30,13 @@ nav a.register:hover {
     width: 20rem; /* match previous inline width */
 }
 
+/* Styling for passwords  */
+.password-list {
+    list-style: none;
+    margin: 1rem;
+}
+
+.password-list button a {
+    text-decoration: none;
+    
+}

@@ -4,13 +4,17 @@ require base_path("views/partials/nav.php");
 ?>
 <div class="container">
     <h2>Saved passwords:</h2>
-        <?php foreach ($notes as $note) : ?>
-            <li>
-                <a href="/password?id=<?=$note['id'] ?>">
-                    <?= htmlspecialchars($note['name']) ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
+        <div>
+            <?php foreach ($notes as $note) : ?>
+                <li class="password-list">
+                    <button class="outline contrast">
+                        <a href="/password?id=<?=$note['id'] ?>">
+                            <?= htmlspecialchars($note['name']) ?>
+                        </a>
+                    </button>
+                </li>
+            <?php endforeach; ?>
+        </div>
     <a role="button" href="/passwords/create">Create</a>
 </div>
 

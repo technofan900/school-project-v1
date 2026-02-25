@@ -13,7 +13,7 @@ $note = $db->query($sql, ['id' => $_GET['id']])->findOrFail();
 
 authorize ($note['userID'] == $userId);
 
-view("passwords/showpassword.view.php", [
+view("passwords/editpassword.view.php", [
     'errors' => $_SESSION['errors'] ?? [],
     'note' => $note
 ]);

@@ -5,9 +5,9 @@ use Core\Database;
 
 $db = App::resolve(Database::class);
 
-$userId = 1;
+$userId = $_SESSION['user']['id'];
 
-// $_SESSION['user']['id'];
+// 
 
 $sql = "SELECT id, name FROM passwords WHERE userID = :userID ORDER BY id DESC";
 $notes = $db->query($sql, ['userID' => $userId])->get();

@@ -6,8 +6,9 @@ body {
 
 nav a.register {
     display: inline-block;
-    color: #fff;
-    border: 2px solid #1e90ff;
+    /* light mode: blue (uses Pico primary). fallback to #1e90ff */
+    color: var(--pico-primary, #1e90ff);
+    border: 2px solid var(--pico-primary, #1e90ff);
     padding: 0.35rem 0.75rem;
     border-radius: 6px;
     text-decoration: none;
@@ -15,8 +16,8 @@ nav a.register {
 }
 
 nav a.register:hover {
-    background: #0c76d1;
-    border-color: #0c76d1;
+    background: var(--pico-primary, #0c76d1);
+    border-color: var(--pico-primary, #0c76d1);
     color: #fff;
 }
 

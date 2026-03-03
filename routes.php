@@ -6,15 +6,16 @@ $router->get('/about', 'about.php');
 
 // Login
 $router->get('/login', 'login/show.php');
+$router->post('/login', 'login/store.php')->only('guest');
+$router->delete('/login', 'login/destroy.php')->only('auth');
 
 // Register page
 $router->get('/register', 'register/show.php');
 $router->post('/register', 'register/create.php');
-
 //register pop up
 $router->get("/pop_up", 'register/popup.php');
 
-// Notes page
+// Passwords page
 $router->get("/passwords", "passwords/index.php");
 $router->get("/passwords/create", "passwords/create.php");
 // Handle creating a new password entry
@@ -25,6 +26,5 @@ $router->patch('/passwords', 'passwords/update.php');
 $router->get('/password/popup', 'passwords/popup.php');
 // Deletes note (form uses _method override)
 $router->delete('/passwords', 'passwords/destroy.php');
-
 $router->get("/password", "passwords/show.php");
 $router->get("/password/edit", "passwords/edit.php");

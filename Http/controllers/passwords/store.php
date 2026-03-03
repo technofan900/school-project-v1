@@ -6,9 +6,9 @@ use Core\Validator;
 
 $db = App::resolve(Database::class);
 
-$userID = 1;
+$userID = $_SESSION['user']['id'];
 
-// $_SESSION['user']['id'];
+// 
 
 $errors = [];
 

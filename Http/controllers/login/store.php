@@ -11,7 +11,7 @@ $form = new LoginForms();
 if ($form->validate($username, $password)) {
 
     $auth = new Authenticator();
-    if($auth->attempt($email, $password)) {
+    if($auth->attempt($username, $password)) {
         redirect('/');
     }
 

@@ -7,7 +7,7 @@ use Core\Database;
 class Authenticator {
 
     public function attempt($email, $password) {
-        $user = App::resolve(Database::class)->query('SELECT * FROM users WHERE email = :email', [
+        $user = App::resolve(Database::class)->query('SELECT * FROM login WHERE email = :email', [
             'email' => $email
         ])->find();
 
@@ -23,6 +23,8 @@ class Authenticator {
 
         return false;
     }
+
+    
 
     public function login ($user) {
         $_SESSION['user'] = [

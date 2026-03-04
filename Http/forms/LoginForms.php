@@ -7,9 +7,9 @@ class LoginForms {
 
     protected $errors = [];
 
-    public function validate($email, $password) {
+    public function validate($username, $password) {
 
-        if (! Validator::email($email)) {
+        if (! Validator::string($username)) {
         $errors['email'] = "Ievadiet derīgu ēpastu";
         }
 

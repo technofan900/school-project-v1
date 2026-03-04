@@ -10,16 +10,19 @@
         <?php if ($_SESSION['user'] ?? false) : ?>
         <li><a href="/passwords">Passwords</a></li>
         <?php endif; ?>
-        <div>
           <?php if ($_SESSION['user'] ?? false) : ?>
             <form action="/login" method="POST">
               <input type="hidden" name="_method" value="DELETE">
-              <button class="register">Logout</button>
+              <li><button class="register">Logout</button></li>
             </form>
           <?php else : ?>
             <li><a class="register" href="/register">Register</a></li>
           <?php endif; ?>
-        </div>
+          <li>
+            <label class="switch" title="Toggle theme">
+              <input id="theme-switch" type="checkbox" role="switch" aria-label="Toggle theme">
+            </label>
+          </li>
       </ul>
     </nav>
   </header> 

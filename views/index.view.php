@@ -5,6 +5,9 @@
   <p>
     Šis ir vienkāršs mājaslapas templates, kas izmanto classless CSS dizainu.
   </p>
+  <?php if ($_SESSION['user'] ?? false) : ?>
+  <?php else : ?>
   <a role="button" href="/login">Log In</a>
+  <?php endif; ?>
 </div>
 <?php require base_path('views/partials/footer.php'); ?>

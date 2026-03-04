@@ -3,7 +3,6 @@ body {
     padding: 0 2rem;
 }
 
-
 nav a.register {
     display: inline-block;
     /* light mode: blue (uses Pico primary). fallback to #1e90ff */
@@ -39,5 +38,4 @@ nav a.register:hover {
 
 .password-list button a {
     text-decoration: none;
-    
 }

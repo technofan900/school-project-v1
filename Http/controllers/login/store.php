@@ -3,21 +3,21 @@ use Core\Authenticator;
 use Http\Forms\LoginForms;
 use Core\Session;
 
-$username = $_POST['username'];
+$login = $_POST['login'];
 $password = $_POST['password'];
 
 $form = new LoginForms();
 
-if ($form->validate($username, $password)) {
+if ($form->validate($login, $password)) {
 
     $auth = new Authenticator();
-    if($auth->attempt($username, $password)) {
+    if ($auth->attempt($login, $password)) {
         redirect('/');
     }
 
-    $form->setError('email', 'Email or password incorrect!');
-
+    $form->setError('login', 'Email/username or password incorrect!');
 }
+
 Session::flash('errors', $form->errors());
 redirect('/login');
 

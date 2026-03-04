@@ -7,10 +7,10 @@ class LoginForms {
 
     protected $errors = [];
 
-    public function validate($username, $password) {
-
-        if (! Validator::string($username)) {
-        $errors['email'] = "Ievadiet derīgu ēpastu";
+    public function validate($login, $password) {
+        // login can be either a username or an email address
+        if (! Validator::string($login)) {
+            $this->errors['login'] = "Ievadiet derīgu lietotājvārdu vai e‑pastu";
         }
 
         if (! Validator::string($password, 4, 255)) {

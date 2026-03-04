@@ -6,8 +6,11 @@ require base_path("views/partials/nav.php");
       <h2>Log In</h2>
       <form method="POST" action="/login">
         <label>
-          Username
-          <input name="username" type="text" placeholder="" required>
+          Email or username
+          <input name="login" type="text" placeholder="" required>
+          <?php if (isset($errors['login'])) : ?>
+            <p class="text-red-400 text-sm"><?= $errors['login'] ?></p>
+          <?php endif; ?>
         </label>
 
         <label>

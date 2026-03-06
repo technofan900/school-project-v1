@@ -39,3 +39,36 @@ nav a.register:hover {
 .password-list button a {
     text-decoration: none;
 }
+
+/* Dropdown shrink-to-text styles */
+details.dropdown {
+    display: inline-block;
+    position: relative;
+}
+details.dropdown > summary {
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+    list-style: none;
+}
+/* hide default marker across browsers */
+details.dropdown > summary::-webkit-details-marker { display: none; }
+details.dropdown > summary::marker { display: none; }
+
+details.dropdown ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin: 0.25rem 0 0 0;
+    padding: 0.25rem 0.5rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    white-space: nowrap;
+    min-width: fit-content;
+    z-index: 10;
+}
+details.dropdown ul li {
+    list-style: none;
+    padding: 0.15rem 0;
+}

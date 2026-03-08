@@ -4,7 +4,6 @@ use Core\Database;
 use Core\Validator;
 
 $userId = $_SESSION['user']['id'];
-// 
 
 $errors = [];
 

@@ -1,6 +1,12 @@
+
+[data-theme="dark"] {
+    --pico-background-color: #0f172a;
+}
+
 body {
     box-sizing: border-box;
     padding: 0 2rem;
+    background: var(--pico-background-color, #e0e0e0);
 }
 
 nav a.register {
@@ -72,3 +78,17 @@ details.dropdown ul li {
     list-style: none;
     padding: 0.15rem 0;
 }
+
+/* Transparent style for the specific Folders toggle */
+.folders-toggle {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: inherit;
+}
+
+/* Move the Create folder button a bit to the right */
+.fButton {
+    margin-left: 0.5rem; /* increase or decrease as needed */
+}
+

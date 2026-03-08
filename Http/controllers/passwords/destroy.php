@@ -5,7 +5,6 @@ use Core\Database;
 $db = App::resolve(Database::class);
 
 $userId = $_SESSION['user']['id'];
-// 
 
 $sql = "SELECT * FROM passwords WHERE id = :id"; 
 $note = $db->query($sql, ['id' => $_POST['id']])->findOrFail();

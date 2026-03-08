@@ -8,8 +8,6 @@ $db = App::resolve(Database::class);
 
 $userID = $_SESSION['user']['id'];
 
-// 
-
 $errors = [];
 
 $name = $_POST['name'] ?? '';

@@ -20,6 +20,7 @@ if ($folderId) {
 $sql .= " ORDER BY id DESC";
 $notes = $db->query($sql, $params)->get();
 
+// folder code
 $folder_sql= "SELECT id, user_id, folder_name FROM folders WHERE user_id = :user_id ORDER BY id DESC";
 
 $folders = $db->query($folder_sql, ['user_id' => $userId])->get();

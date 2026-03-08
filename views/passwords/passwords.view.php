@@ -3,9 +3,9 @@ require base_path("views/partials/header.php");
 require base_path("views/partials/nav.php");
 ?>
 <div class="container">
-    <div class="filter">
+    <div class="folder">
         <details class="dropdown">
-            <summary role="button">
+            <summary role="button" class="folders-toggle">
                 Folders
             </summary>
             <ul>
@@ -21,6 +21,7 @@ require base_path("views/partials/nav.php");
                 <?php endforeach; ?>
             </ul>
         </details>
+        <a role="button" class="fButton" href="/folders">Create folder</a>
     </div>
     <div>
         <h2>Saved passwords:</h2>

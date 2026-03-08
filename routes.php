@@ -28,3 +28,7 @@ $router->get('/password/popup', 'passwords/popup.php');
 $router->delete('/passwords', 'passwords/destroy.php');
 $router->get("/password", "passwords/show.php");
 $router->get("/password/edit", "passwords/edit.php");
+
+// create folders
+$router->get("/folders" , "folders/show.php");
+$router->post("/folder" , 'folders/store.php');

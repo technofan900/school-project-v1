@@ -1,12 +1,22 @@
+[data-theme="light"] {
+    --pico-background-color: #e9e9ea; /* light-mode background (gray) */
+    --disclosure-icon: #222; /* chevron color in light mode */
+    --pico-primary: #1e90ff;
+    --text-color: #111;
+}
 
 [data-theme="dark"] {
     --pico-background-color: #0f172a;
+    --disclosure-icon: #fff; /* chevron color in dark mode */
+    --pico-primary: #4ea3ff;
+    --text-color: #f5f7fb;
 }
 
 body {
     box-sizing: border-box;
     padding: 0 2rem;
     background: var(--pico-background-color, #e0e0e0);
+    color: var(--text-color, inherit);
 }
 
 nav a.register {
@@ -78,6 +88,8 @@ details.dropdown ul li {
     list-style: none;
     padding: 0.15rem 0;
 }
+
+/* Folders design */
 
 /* Transparent style for the specific Folders toggle */
 .folders-toggle {

@@ -24,7 +24,22 @@ require base_path("views/partials/nav.php");
         <a role="button" class="fButton" href="/folders">Create folder</a>
     </div>
     <div>
-        <h2>Saved passwords:</h2>
+        <?php
+        $selectedFolderName = 'All';
+        if (!empty($currentFolder)) {
+            if (is_array($currentFolder) && isset($currentFolder['folder_name'])) {
+                $selectedFolderName = $currentFolder['folder_name'];
+            } elseif (!empty($folders) && is_array($folders)) {
+                foreach ($folders as $folder) {
+                    if ((int)$folder['id'] === (int)$currentFolder) {
+                        $selectedFolderName = $folder['folder_name'];
+                        break;
+                    }
+                }
+            }
+        }
+        ?>
+        <h2><?= htmlspecialchars($selectedFolderName) ?> - Saved passwords:</h2>
             <div>
                 <?php foreach ($notes as $note) : ?>
                     <li class="password-list">

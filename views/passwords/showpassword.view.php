@@ -6,8 +6,10 @@ require base_path("views/partials/nav.php");
 <div class="container">
     <div>
         <h1><?= $note['name'] ?></h1>
-        <h1><?= $note['login_data'] ?></h1>
-        <h1><?= $note['password'] ?></h1>
+        <label for="login_data">Login Data</label>
+        <input type="text" name="login_data" value="<?= $note['login_data'] ?>" aria-label="Read-only name" readonly>
+        <label for="password">Login Data</label>
+        <input type="text" name="password" value="<?= $note['password'] ?>" aria-label="Read-only name" readonly>
     </div>
     <div class="buttons">
         <a href="/password/edit?id=<?= $note['id'] ?>">Edit</a>

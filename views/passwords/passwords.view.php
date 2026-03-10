@@ -41,15 +41,43 @@ require base_path("views/partials/nav.php");
         ?>
         <h2><?= htmlspecialchars($selectedFolderName) ?> - Saved passwords:</h2>
             <div>
-                <?php foreach ($notes as $note) : ?>
-                    <li class="password-list">
-                        <button class="outline contrast">
-                            <a href="/password?id=<?=$note['id'] ?>">
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Login</th>
+                            <th scope="col">Folder</th>                                
+                        </tr>
+                    </thead>
+                    <?php foreach($notes as $note) : ?>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <a href="/password?id=<?=$note['id'] ?>">
                                 <?= htmlspecialchars($note['name']) ?>
-                            </a>
-                        </button>
-                    </li>
-                <?php endforeach; ?>
+                                </a>
+                            </th>
+                            <td>
+                                <?= htmlspecialchars($note['login_data']) ?>
+                            </td>
+                            <td>
+                                <?php
+                                $folderName = 'All';
+                                if (!empty($note['folder_id'])) {
+                                    foreach ($folders as $folder) {
+                                        if ((int)$folder['id'] === (int)$note['folder_id']) {
+                                            $folderName = $folder['folder_name'];
+                                            break;
+                                        }
+                                    }
+                                }
+                                echo htmlspecialchars($folderName);
+                                ?>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <?php endforeach; ?>
+                </table>
             </div>
         <a role="button" href="/passwords/create">Create</a>
     </div>

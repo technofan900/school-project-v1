@@ -12,7 +12,7 @@ $userId = $_SESSION['user']['id'];
 $folderId = isset($_GET['folder_id']) && $_GET['folder_id'] !== '' ? (int) $_GET['folder_id'] : null;
 
 $params = ['userID' => $userId];
-$sql = "SELECT id, name, folder_id FROM passwords WHERE userID = :userID";
+$sql = "SELECT id, name, login_data, folder_id FROM passwords WHERE userID = :userID";
 if ($folderId) {
     $sql .= " AND folder_id = :folder_id";
     $params['folder_id'] = $folderId;

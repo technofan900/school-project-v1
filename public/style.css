@@ -19,6 +19,14 @@ body {
     color: var(--text-color, inherit);
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 nav a.register {
     display: inline-block;
     /* light mode: blue (uses Pico primary). fallback to #1e90ff */
